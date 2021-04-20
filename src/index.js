@@ -1,11 +1,16 @@
 import PrintME from './print';
+import { getList } from './components/A';
 import './global.css';
 
 function component() {
     const element = document.createElement('div');
 
-    element.innerHTML = ['Hello', 'webpack!!', PrintME()].join(' ');
-    element.classList.add('hello');
+    element.innerHTML = getList([
+        { text: 'A 11' },
+        { text: 'A 22' },
+        { text: 'A 33' },
+        { text: PrintME() },
+    ]);
 
     return element;
 }

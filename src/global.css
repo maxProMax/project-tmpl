@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Zen Dots';
+    src: url('../public/fonts/ZenDots-Regular.ttf');
+}
+
 body {
     color: rgb(74, 2, 31);
+    font-family: 'Zen Dots';
 }
