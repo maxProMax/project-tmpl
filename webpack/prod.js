@@ -25,8 +25,9 @@ module.exports = merge(common, {
             },
         ],
     },
+    plugins: [new ESLintPlugin({ extensions: ['js', 'jsx', 'ts', 'tsx'] })],
     optimization: {
         minimize: true,
-        minimizer: [new ESLintPlugin(), `...`, new CssMinimizerPlugin()],
+        minimizer: [`...`, new CssMinimizerPlugin()],
     },
 });

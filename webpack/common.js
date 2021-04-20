@@ -44,10 +44,11 @@ module.exports = {
                     filename: 'fonts/[base]',
                 },
             },
+            { test: /\.tsx?$/, loader: 'ts-loader' },
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.json'],
+        extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [new MiniCssExtractPlugin()],
 };
