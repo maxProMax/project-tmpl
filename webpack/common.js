@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        index: path.resolve(process.cwd(), 'src', 'index.ts'),
+        index: path.resolve(process.cwd(), 'src', 'index.tsx'),
     },
     output: {
         filename: '[name].[contenthash].bundle.js',
@@ -21,6 +21,12 @@ module.exports = {
                     options: {
                         presets: [
                             '@babel/preset-env',
+                            [
+                                '@babel/preset-react',
+                                {
+                                    runtime: 'automatic',
+                                },
+                            ],
                             '@babel/preset-typescript',
                         ],
                     },

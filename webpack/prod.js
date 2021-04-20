@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge');
-const common = require('./common.js');
+const common = require('./common');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
